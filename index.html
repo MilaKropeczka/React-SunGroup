@@ -15,28 +15,32 @@
     <div id="root"></div>
     <script type="text/babel">
 
-        const Post = (props) => {
-            const [showContent, setShowContent] = React.useState(false)
-            const showMoreContent = () => {
-                console.log(`dziala`);
+        const [showContent, setShowContent] = React.useState(false)
+
+        class Post extends React.Component {
+            constructor(props) {
+                super(props)
+            }
+            showMoreContent() {
                 setShowContent(true)
             }
+            render() {
+                return (
+                    <div>
+                        <h2>{this.props.title}</h2>
+                        {showContent ? (
+                            <p>{this.props.content}</p>
+                        ) : (
+                            <>
+                                <p>{this.props.shortContent}</p>
+                                <button onClick={this.showMoreContent.bind(this)}>Czytaj więcej</button>
+                            </>
 
-            return (
-                <div>
-                    <h2>{props.title}</h2>
-                    {showContent ? (
-                        <p>{props.content}</p>
-                    ) : (
-                        <>
-                            <p>{props.shortContent}</p>
-                            <button onClick={showMoreContent}>Czytaj więcej</button>
-                        </>
-
-                    )}
-                    <hr />
-                </div>
-            );
+                        )}
+                        <hr />
+                    </div>
+                );
+            }
         }
 
         const Blog = function () {
