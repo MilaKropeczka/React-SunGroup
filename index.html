@@ -54,10 +54,7 @@
             const postsList = posts.map(el => (
                 <Post
                     key={el.id}
-                    title={el.title}
-                    content={el.content}
-                    showContent={el.showContent}
-                    shortContent={el.shortContent}
+                    {...el}
                 />
             ))
 
