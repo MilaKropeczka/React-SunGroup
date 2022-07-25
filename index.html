@@ -16,15 +16,21 @@
     <script type="text/babel">
 
         const Post = (props) => {
+            const [showContent, setShowContent] = React.useState(false)
+            const showMoreContent = () => {
+                console.log(`dziala`);
+                setShowContent(true)
+            }
+
             return (
                 <div>
                     <h2>{props.title}</h2>
-                    {props.showContent ? (
+                    {showContent ? (
                         <p>{props.content}</p>
                     ) : (
                         <>
                             <p>{props.shortContent}</p>
-                            <button>Czytaj więcej</button>
+                            <button onClick={showMoreContent}>Czytaj więcej</button>
                         </>
 
                     )}
@@ -39,14 +45,12 @@
                     title: `Przepis na naleśniki`,
                     shortContent: `Na naturalnym mleku...`,
                     content: `mleko, jajka zmieszać...`,
-                    showContent: true,
                     id: 2
                 },
                 {
                     title: `Przepis na kurczaka`,
                     shortContent: `Na ostro...`,
                     content: `pokroić kurczaka, usmażyć...`,
-                    showContent: false,
                     id: 3
                 }
             ];
