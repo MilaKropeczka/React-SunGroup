@@ -1,15 +1,11 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Searchbar from './Searchbar/Searchbar';
 
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<div>
-                <input style={{
-                    width: `100px`
-                }} className={styles.input} type='text' placeholder='Szukaj...' />
-				<button>Szukaj</button>
-			</div>
+			<Searchbar />
 		</header>
 	);
 };
