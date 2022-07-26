@@ -4,16 +4,15 @@ const Searchbar = () => {
 	return (
 		<div>
 			<input
-				className='input-text'
+				className='form-control'
 				style={{
-					width: `100px`,
+					width: `200px`,
 				}}
 				type='text'
 				placeholder='Szukaj...'
 			/>
-			<button className='button'>Szukaj</button>
-			<button type='button' class='btn btn-primary'>
-				Primary
+			<button type='button' className='btn btn-primary'>
+				Szukaj
 			</button>
 		</div>
 	);
