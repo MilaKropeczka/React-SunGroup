@@ -1,0 +1,7 @@
+.header {
+	height: 50px;
+	background-color: tomato;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

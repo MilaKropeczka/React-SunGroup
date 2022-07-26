@@ -1,8 +1,8 @@
 import React from 'react';
-import './Header.css';
+import styles from './Header.module.css';
 
 const Header = () => {
-	return <header className="site-header"> header </header>;
+	return <header className={styles.header}> header </header>;
 };
 
 export default Header;
