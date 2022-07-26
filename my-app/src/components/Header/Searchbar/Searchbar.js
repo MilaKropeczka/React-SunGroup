@@ -4,6 +4,7 @@ const Searchbar = () => {
 	return (
 		<div>
 			<input
+				className='input-text'
 				style={{
 					width: `100px`,
 				}}
