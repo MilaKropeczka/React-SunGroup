@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Lists = () => {
+
+const Lists = (props) => {
 	return (
-		<ul className='hiddenMobile'>
+		<ul className={props.hidden}>
 			<li className='action action2 menuButton'>
 				<a href='#'>O nas</a>
 			</li>
