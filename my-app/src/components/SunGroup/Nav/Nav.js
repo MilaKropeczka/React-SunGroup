@@ -4,7 +4,7 @@ import Lists from './Lists/Lists';
 import img from '../../../assets/SunGroup/img/SunPage.svg';
 
 const Nav = () => {
-	const [isActive, setActive] = useState('false');
+	const [isActive, setActive] = useState(false);
 
 	const menuToggle = () => {
 		setActive(!isActive);
@@ -15,9 +15,12 @@ const Nav = () => {
 			<div>
 				<div className='navDeskop'>
 					<p className='hiddenDeskop'>
-						{/* <i className='fa-solid fa-bars' onClick={showMenu}></i> */}
 						<i
-							className='fa-solid fa-bars'
+							className={
+								'fa-solid' +
+								' ' +
+								(!isActive ? 'fa-bars' : 'fa-xmark')
+							}
 							onClick={menuToggle}></i>
 					</p>
 					<img src={img} alt='Logo SunGroup' />
@@ -31,15 +34,6 @@ const Nav = () => {
 					}>
 					<Lists />
 				</div>
-				{/* {setMenu ? (
-					<div className={`navMobile hiddenDeskop`}>
-						<Lists />
-					</div>
-				) : (
-					<div className={`navMobile hiddenDeskop show`}>
-						<Lists />
-					</div>
-				)} */}
 			</div>
 		</nav>
 	);
