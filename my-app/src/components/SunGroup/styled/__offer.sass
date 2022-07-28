@@ -43,7 +43,6 @@
             overflow: hidden
             position: relative
             margin: 20px 0
-            // width: 100%
             @media only screen and (min-width: $deskop)
                 width: 548px
                 grid-column: 2/3
@@ -68,21 +67,19 @@
     .item4
         display: grid
         justify-content: center
+        overflow: hidden
         @media only screen and (max-width: $mobile)
             margin-bottom: 20px
-        // overflow: hidden
         .box
             position: relative
-            // max-width: 940px
             text-align: center
-            @media only screen and (min-width: $deskop)
-                // width: 900px
-                top: 50%
-                // left: 50%
-                margin: 0 auto
-                transform: translateY(-50%)
-            @media only screen and (max-width: 400px)
-                padding: 0 32px
+            @media only screen and (max-width: 399px)
+                width: 90vw
+                padding: 0 20px
+                transform: translateX(-50%)
+                left: 50%
+            @media only screen and (min-width: 400px)
+                padding: 0 42px
             @media only screen and (min-width: 800px) and (max-width: 900px)
                 padding: 0 80px
             @media only screen and (min-width: 901px) and (max-width: 1000px)
@@ -162,52 +159,17 @@
     @media only screen and (min-width: $deskop)
         margin-bottom: 148px
 
-.slick-track
-    position: relative
-    top: 50%
-    left: 0
-    transform: translate(-50%,-50%)
-    display: block
-    margin-left: auto
-    margin-right: auto
+.slick-cloned > div
+    @media only screen and (max-width: 400px)
+        width: 10vw
+.slick-active + .slick-slide > div
+    @media only screen and (max-width: 400px)
+        width: 200vw
 
-.slick-slide
-    @media only screen and (max-width: $mobile)
-        top: -180px
-    @media only screen and (min-width: 382px)
-        top: -150px
-    @media only screen and (min-width: 564px)
-        top: -130px
-
-.slick-list, .slick-slider
-    position: relative
-
-.slick-arrow
-    display: none
-    height: 40px
-    width: 40px
-    border-radius: 30px
-    background-color: $white
-    border: 1px solid $grey-100
-    color: transparent
-    cursor: pointer
-    top: 50%
-    position: absolute
-
-.slick-next
-    right: 0
-
-.slick-next::before
-    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowRight.svg)
-    display: block
-    color: $primary-600
-    transform: translate(0, 9px)
-.slick-prev
-    z-index: 1
-    left: 0
-
-.slick-prev::before
-    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowLeft.svg)
-    display: block
-    color: $primary-600
-    transform: translate(0px, 9px)
+.slick-list
+    margin: 20px 0px
+    width: 100vw
+    @media only screen and (min-width: 800px)
+        width: 100vw
+    @media only screen and (min-width: 1360px)
+        width: 200vw

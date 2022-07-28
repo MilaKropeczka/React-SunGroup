@@ -1,7 +1,7 @@
 import React from 'react';
-import ItemLeft from './Item/ItemLeft';
-import ItemRight from './Item/ItemRight';
-import Item4 from './Item/Item4';
+import ItemLeft from './Item/ItemLeft/ItemLeft';
+import ItemRight from './Item/ItemRight/ItemRight';
+import Item4 from './Item/Item4/Item4';
 
 const OfferSection = () => {
 	return (
