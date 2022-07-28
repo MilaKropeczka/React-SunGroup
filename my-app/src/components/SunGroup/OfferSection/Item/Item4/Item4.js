@@ -23,7 +23,7 @@ const Item4 = () => {
 				<Slider {...settings}>
 					<Box name='Jan Kowalski' />
 					<Box name='Piotr Żabiński' />
-					<Box name='Jakub Kozłowski' />
+					<Box name='Natalia Kozłowska' />
 				</Slider>
 			</div>
 		</div>
