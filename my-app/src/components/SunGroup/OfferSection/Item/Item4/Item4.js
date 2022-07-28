@@ -5,7 +5,7 @@ import Box from './Box/Box';
 const Item4 = () => {
 	const settings = {
 		autoplaySpeed: 2000,
-		speed: 1000,
+		speed: 100,
 		focusOnSelect: false,
 		centerMode: true,
 		// autoplay: true,
@@ -13,6 +13,7 @@ const Item4 = () => {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		pauseOnHover: false,
 	};
 	return (
 		<div>
@@ -20,8 +21,9 @@ const Item4 = () => {
 			<hr className='hrItem' />
 			<div className='item4'>
 				<Slider {...settings}>
-					<Box />
-					<Box />
+					<Box name='Jan Kowalski' />
+					<Box name='Piotr Żabiński' />
+					<Box name='Jakub Kozłowski' />
 				</Slider>
 			</div>
 		</div>
