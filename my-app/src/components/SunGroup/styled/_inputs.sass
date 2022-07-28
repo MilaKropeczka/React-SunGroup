@@ -6,7 +6,7 @@
     height: 56px
 .formTextarea
     height: 180px
-.formInput
+.form__input
     position: absolute
     top: 0
     left: 0
@@ -18,11 +18,11 @@
     outline: none
     padding: 12px
     background: none
-.formInput:hover
+.form__input:hover
     border-color: $grey-300
-.formInput:focus
+.form__input:focus
     border-color: $primary-500
-.formLabel
+.form__label
     position: absolute
     left: 20px
     top: 18px
@@ -31,7 +31,7 @@
     cursor: text
     transition: top .1s ease-in, left .1s ease-in, font-size .1s ease-in
     background-color: $white
-.formInput:focus ~ .formLabel, .formInput:not(:placeholder-shown).formInput:not(:focus) ~ .formLabel
+.form__input:focus ~ .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label
     top: -5px
     font-size: 12px
     left: 15px

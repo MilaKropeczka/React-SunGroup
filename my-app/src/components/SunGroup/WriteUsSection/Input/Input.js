@@ -7,13 +7,13 @@ function Input(props) {
 				type='text'
 				pattern={props.pattern}
 				id={props.id}
-				className='formInput'
+				className='form__input'
 				placeholder=' '
 				minLength='3'
 				maxLength='32'
 				required
 			/>
-			<label htmlFor={props.id} className='formLabel'>
+			<label htmlFor={props.id} className='form__label'>
 				{props.id}
 			</label>
 		</div>

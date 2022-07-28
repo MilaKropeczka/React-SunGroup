@@ -7,11 +7,11 @@ function TextArea() {
 				<textarea
 					type='text'
 					id='message'
-					className='formInput'
+					className='form__input'
 					autoComplete='off'
 					placeholder=' '
 					required></textarea>
-				<label htmlFor='message' className='formLabel'>
+				<label htmlFor='message' className='form__label'>
 					Twoja wiadomość
 				</label>
 			</div>
