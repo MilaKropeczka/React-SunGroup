@@ -167,9 +167,39 @@
         width: 200vw
 
 .slick-list
-    margin: 20px 0px
+    margin: 20px 0 0 0
     width: 100vw
     @media only screen and (min-width: 800px)
         width: 100vw
     @media only screen and (min-width: 1360px)
         width: 200vw
+
+.slick-slider
+    // overflow: hidden
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    @media only screen and (min-width: 400)
+        width: 80vw
+
+.slick-arrow
+    position: absolute
+    top: 50%
+    z-index: 1
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 2px solid $grey-100
+    background-color: $white
+    cursor: pointer
+
+.slick-prev
+    left: 0
+.slick-prev::before
+    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowLeft.svg)
+
+.slick-next
+    right: 0
+.slick-next::before
+    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowRight.svg)

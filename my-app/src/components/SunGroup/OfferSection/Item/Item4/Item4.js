@@ -8,7 +8,7 @@ const Item4 = () => {
 		speed: 1000,
 		focusOnSelect: false,
 		centerMode: true,
-		autoplay: true,
+		// autoplay: true,
 		dots: false,
 		infinite: true,
 		slidesToShow: 1,
