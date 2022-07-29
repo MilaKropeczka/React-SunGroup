@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button() {
+function Button(props) {
 	return (
 		<button id='formBtn' className='primaryLarge'>
 			{props.name}
