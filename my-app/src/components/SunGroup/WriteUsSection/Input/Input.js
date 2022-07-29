@@ -4,16 +4,24 @@ function Input(props) {
 	const [isActive, setActive] = useState(``);
 
 	const checkInput = () => {
-		// const str = '729864129';
-		const str = 'test';
-		const reg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
-		if (reg.test(str)) {
+		const reg = new RegExp(props.pattern);
+		// if (reg.test(`test`)) {
+		if (reg.test(`720864120`)) {
 			setActive(true);
 			console.log(`dziala`);
 		} else {
 			setActive(false);
 			console.log(`nie dziala`);
 		}
+		// const reg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
+		// if (reg.test(str)) {
+		// 	// if (pattern.test(str)) {
+		// 	setActive(true);
+		// 	console.log(`dziala1`);
+		// } else {
+		// 	setActive(false);
+		// 	console.log(`nie dziala`);
+		// }
 	};
 
 	return (
