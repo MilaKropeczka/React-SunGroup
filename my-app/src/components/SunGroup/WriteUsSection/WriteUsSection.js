@@ -3,6 +3,7 @@ import Input from './Input/Input';
 import TextArea from './TextArea/TextArea';
 import Checkbox from './Checkbox/Checkbox';
 import img from '../../../assets/SunGroup/img/ContactImage.jpg';
+import Button from './Button/Button';
 
 function WriteUsSection() {
 	return (
@@ -30,13 +31,13 @@ function WriteUsSection() {
 								pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 								id='email'
 								idParagraph='itemEmail'
-								item='Wpisz poprawny E-Mail'
+								item='Wpisz poprawny adres E-Mail'
 							/>
 							<Input
 								pattern='\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})'
 								id='number'
 								idParagraph='itemNumber'
-								item='Wpisz poprawny numer'
+								item='Wpisz poprawny numer telefonu'
 							/>
 						</div>
 						<TextArea
@@ -49,9 +50,7 @@ function WriteUsSection() {
                             przetwarzanie moich danych osobowych przez
                             Sungroup.pl'
 						/>
-						<button id='formBtn' className='primaryLarge'>
-							Wyślij wiadomość
-						</button>
+						<Button name='Wyślij wiadomość' />
 					</form>
 				</div>
 			</div>

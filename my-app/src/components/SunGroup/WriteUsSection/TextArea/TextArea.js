@@ -3,13 +3,18 @@ import React, { useState } from 'react';
 function TextArea(props) {
 	const [isActive, setActive] = useState('');
 	const [text, setText] = useState('');
+	const [isRefresh, setRefresh] = useState(null);
 
 	const checkTextArea = () => {
 		const reg = new RegExp(props.pattern);
+		setRefresh(true);
 		if (reg.test(text) && text.length > 2) {
 			setActive(true);
 		} else {
 			setActive(false);
+		}
+		if (text.length === 0) {
+			setRefresh(null);
 		}
 	};
 
@@ -20,7 +25,9 @@ function TextArea(props) {
 					type='text'
 					id='message'
 					className={
-						'form__input' + ' ' + (isActive ? 'success' : 'error')
+						'form__input' +
+						' ' +
+						(!isRefresh ? ' ' : isActive ? 'success' : 'error')
 					}
 					autoComplete='off'
 					placeholder=' '
@@ -35,7 +42,7 @@ function TextArea(props) {
 			</div>
 			<p
 				id={props.idParagraph}
-				className={isActive ? null : 'visibility'}>
+				className={!isRefresh ? ' ' : isActive ? null : 'visibility'}>
 				{props.item}
 			</p>
 		</>

@@ -8,12 +8,12 @@ function Input(props) {
 	const checkInput = () => {
 		const reg = new RegExp(props.pattern);
 		setRefresh(true);
-		if (reg.test(text) && text.length > 2 && text.length < 16) {
+		if (reg.test(text) && text.length > 2) {
 			setActive(true);
 		} else {
 			setActive(false);
 		}
-		if (text.length == 0) {
+		if (text.length === 0) {
 			setRefresh(null);
 		}
 	};
