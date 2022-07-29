@@ -12,21 +12,43 @@ function WriteUsSection() {
 					<h3>Napisz do nas</h3>
 					<form id='writeUs'>
 						<div className='wrapper'>
-							<Input pattern="[a-zA-Z'-'\s]*" id='name' />
-							<Input pattern="[a-zA-Z'-'\s]*" id='surname' />
+							<Input
+								pattern="[a-zA-Z'-'\s]*"
+								id='name'
+								idParagraph='itemName'
+								item='Wpisz poprawne imię'
+							/>
+							<Input
+								pattern="[a-zA-Z'-'\s]*"
+								id='surname'
+								idParagraph='itemSurname'
+								item='Wpisz poprawne nazwisko'
+							/>
 						</div>
 						<div className='wrapper'>
 							<Input
 								pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 								id='email'
+								idParagraph='itemEmail'
+								item='Wpisz poprawny E-Mail'
 							/>
 							<Input
 								pattern='\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})'
 								id='number'
+								idParagraph='itemNumber'
+								item='Wpisz poprawny numer'
 							/>
 						</div>
-						<TextArea />
-						<Checkbox />
+						<TextArea
+							pattern="[a-zA-Z'-'\s]*"
+							idParagraph='itemMessage'
+							item='Wpisz poprawną wiadomość. Minimum 3 znaki'
+						/>
+						<Checkbox
+							text='Zapoznałem się z regulaminem i wyrażam zgodę na
+                            przetwarzanie moich danych osobowych przez
+                            Sungroup.pl'
+						/>
 						<button id='formBtn' className='primaryLarge'>
 							Wyślij wiadomość
 						</button>

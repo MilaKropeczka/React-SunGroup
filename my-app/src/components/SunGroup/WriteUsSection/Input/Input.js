@@ -1,27 +1,16 @@
 import React, { useState } from 'react';
 
 function Input(props) {
-	const [isActive, setActive] = useState(``);
+	const [isActive, setActive] = useState('');
+	const [text, setText] = useState('');
 
 	const checkInput = () => {
 		const reg = new RegExp(props.pattern);
-		// if (reg.test(`test`)) {
-		if (reg.test(`720864120`)) {
+		if (reg.test(text) && text.length > 2) {
 			setActive(true);
-			console.log(`dziala`);
 		} else {
 			setActive(false);
-			console.log(`nie dziala`);
 		}
-		// const reg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
-		// if (reg.test(str)) {
-		// 	// if (pattern.test(str)) {
-		// 	setActive(true);
-		// 	console.log(`dziala1`);
-		// } else {
-		// 	setActive(false);
-		// 	console.log(`nie dziala`);
-		// }
 	};
 
 	return (
@@ -37,11 +26,19 @@ function Input(props) {
 				minLength='3'
 				maxLength='32'
 				required
+				onChange={(e) => setText(e.target.value)}
 				onClick={checkInput}
+				onFocus={checkInput}
+				onKeyUp={checkInput}
 			/>
-			<label htmlFor={props.id} className='form__label'>
+			<label htmlFor={props.id} className={'form__label'}>
 				{props.id}
 			</label>
+			<p
+				id={props.idParagraph}
+				className={'item' + ' ' + (isActive ? null : 'visibility')}>
+				{props.item}
+			</p>
 		</div>
 	);
 }
