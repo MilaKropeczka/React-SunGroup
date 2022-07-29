@@ -1,0 +1,74 @@
+nav
+    height: 60px
+    background-color: $white
+    width: 100%
+    @media only screen and (min-width: $deskop)
+        height: 100px
+    @media only screen and (max-width: $mobile)
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    .navDeskop
+        position: relative
+        width: 80%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin: 0 auto
+        @media only screen and (min-width: $deskop)
+            height: 100px
+        @media only screen and (min-width: 1360px)
+            width: 1360px
+        // @media only screen and (max-width: $mobile)
+        //     position: absolute
+        img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            @media only screen and (max-width: $mobile)
+                top: 30px
+                transform: translateY(-50%)
+                right: 0
+            @media only screen and (min-width: $deskop)
+                left: 0
+        ul > li
+            @media only screen and (min-width: $deskop)
+                display: inline
+                margin-left: 48px
+        p
+            position: absolute
+            left: 0
+            font-size: 30px
+            cursor: pointer
+            @media only screen and (max-width: $mobile)
+                top: 30px
+                transform: translateY(-50%)
+            i
+                position: relative
+                cursor: pointer
+
+
+nav .navMobile
+    @media only screen and (max-width: $mobile)
+        background-color: $white
+        width: 100%
+        height: calc(100vh - 60px)
+        position: absolute
+        top: 60px
+        left: -1200px
+        z-index: 100
+        transition: left .3s
+    ul
+        margin: calc(50vh - 30px - 161px ) 12px 0 0px
+    ul > li
+        @media only screen and (max-width: $mobile)
+            padding: 12px 0 22px 0
+            list-style: none
+            font-size: 20px
+            text-align: center
+            font-weight: 400
+.show
+    @media only screen and (max-width: $mobile)
+        left: 0 !important

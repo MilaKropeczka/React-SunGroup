@@ -1,0 +1,216 @@
+.sectionOffer
+    background-color: #fff
+    display: grid
+    +gridCenter
+    @media only screen and (min-width: $deskop)
+        height: 2833px
+        grid-template-rows: repeat(4, 1fr)
+    @media only screen and (max-width: $mobile)
+        grid-template-rows: repeat(3, 1fr)
+    .items
+        display: grid
+        @media only screen and (min-width: $deskop)
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr
+        @media only screen and (max-width: $mobile)
+            grid-template-columns: 1fr
+        .img
+            @media only screen and (max-width: $mobile)
+                height: 350px
+        h2
+            margin-bottom: 20px
+            margin-top: 12px
+        p.offer
+            color: $grey-900
+            line-height: 18px
+            margin-bottom: 32px
+            @media only screen and (min-width: $deskop)
+                line-height: 28px
+                width: 548px
+        .left
+            overflow: hidden
+            position: relative
+            @media only screen and (min-width: $deskop)
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                border-radius: 8px
+                grid-column: 1/2
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        .right
+            border-radius: 8px
+            overflow: hidden
+            position: relative
+            margin: 20px 0
+            @media only screen and (min-width: $deskop)
+                width: 548px
+                grid-column: 2/3
+                display: flex
+                align-items: center
+                margin: 0 auto
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+                text-align: center
+        #right
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        #left
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+                text-align: center
+        .box
+            @media only screen and (min-width: $deskop)
+                max-width: 548px
+        p.caption
+            font-family: 'Poppins'
+    .item4
+        display: grid
+        justify-content: center
+        overflow: hidden
+        @media only screen and (max-width: $mobile)
+            margin-bottom: 20px
+        .box
+            position: relative
+            text-align: center
+            @media only screen and (max-width: 399px)
+                width: 70vw
+                transform: translateX(-50%)
+                left: 50%
+            @media only screen and (min-width: 400px)
+                padding: 0 42px
+            @media only screen and (min-width: 800px) and (max-width: 900px)
+                padding: 0 80px
+            @media only screen and (min-width: 901px) and (max-width: 1000px)
+                padding: 0 160px
+            @media only screen and (min-width: 1001px) and (max-width: 1200px)
+                padding: 0 200px
+            img
+                border-radius: 50%
+                width: 46px
+                height: 46px
+                margin: 10px
+                margin-top: 30px
+                margin: 30px auto 0 auto
+            p
+                @media only screen and (min-width: $deskop)
+                    width: 900px
+        p.caption
+            margin: 0 auto
+            font-weight: 500
+            font-family: 'Poppins'
+        h2
+            color: $grey-900
+        blockquote
+            p
+                margin: 0 auto
+                line-height: 18px
+                color: $grey-900
+                @media only screen and (min-width: $deskop)
+                    line-height: 28px
+            cite
+                color: $grey-900
+                font-style: normal
+                line-height: 30px
+                font-size: 18px
+            .grey-700
+                margin: 0
+                width: 100%
+                text-align: center
+                line-height: 28px
+                color: $grey-700
+    img.image
+        border-radius: 8px
+        @media only screen and (min-width: $deskop)
+            margin: 128px 60px
+            height: 548px
+            width: 548px
+
+.sectionOffer .items > *
+    display: grid
+    justify-content: center
+
+.sectionOffer div > img
+    @media only screen and (max-width: $mobile)
+        max-height: 800px
+    @media only screen and (max-width: $small_mobile)
+        max-height: 400px
+
+.sectionOffer .img
+    background-size: cover
+    background-position: center
+    width: 548px
+    height: 548px
+#img1
+    background-image: url(../../../assets/SunGroup/img/Image@2x-5.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
+#img2
+    background-image: url(../../../assets/SunGroup/img/Image@2x-4.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
+#img3
+    background-image: url(../../../assets/SunGroup/img/Image@2x-3.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
+
+.hrItem
+    @media only screen and (min-width: $deskop)
+        margin-bottom: 148px
+
+.slick-cloned > div
+    @media only screen and (max-width: 400px)
+        width: 0
+.slick-active + .slick-slide > div
+    @media only screen and (max-width: 400px)
+        width: 250vw
+// .slick-cloned + .slick-slide > div > .box
+    // @media only screen and (max-width: 400px)
+        // left: 30%
+
+
+.slick-list
+    margin: 20px 0 0 0
+    width: 100vw
+    @media only screen and (min-width: 800px)
+        width: 100vw
+    @media only screen and (min-width: 1360px)
+        width: 200vw
+
+.slick-slider
+    // overflow: hidden
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    @media only screen and (min-width: 1360px)
+        width: 80vw
+
+.slick-arrow
+    position: absolute
+    top: 50%
+    z-index: 1
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 2px solid $grey-100
+    background-color: $white
+    cursor: pointer
+    opacity: 1
+.slick-arrow:hover
+    border: 2px solid $grey-200
+.slick-arrow:active
+    border: 2px solid $grey-300
+.slick-prev
+    left: 0
+    @media only screen and (min-width: 1360px)
+        left: 10%
+.slick-prev::before
+    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowLeft.svg)
+
+.slick-next
+    right: 0
+    @media only screen and (min-width: 1360px)
+        right: 15%
+.slick-next::before
+    content: url(../../../assets/SunGroup/img/Icon/20x20/ArrowRight.svg)
