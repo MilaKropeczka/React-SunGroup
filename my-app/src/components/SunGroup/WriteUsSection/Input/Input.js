@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function Input(props) {
 	const [isActive, setActive] = useState('');
 	const [text, setText] = useState('');
+	// const [isRefresh, setRefresh] = useState(null);
 
 	const checkInput = () => {
 		const reg = new RegExp(props.pattern);
@@ -10,6 +11,10 @@ function Input(props) {
 			setActive(true);
 		} else {
 			setActive(false);
+		}
+		if (text.length === 0) {
+			console.log(`nie ma`);
+			setActive(null);
 		}
 	};
 
@@ -20,14 +25,15 @@ function Input(props) {
 				pattern={props.pattern}
 				id={props.id}
 				className={
-					'form__input' + ' ' + (isActive ? 'success' : 'error')
+					'form__input ' + (isActive ? 'success' : 'error')
+					// (isRefresh ? '' : isActive ? 'success' : 'error')
 				}
 				placeholder=' '
 				minLength='3'
 				maxLength='32'
 				required
 				onChange={(e) => setText(e.target.value)}
-				onClick={checkInput}
+				// onClick={checkInput}
 				onFocus={checkInput}
 				onKeyUp={checkInput}
 			/>
@@ -36,7 +42,7 @@ function Input(props) {
 			</label>
 			<p
 				id={props.idParagraph}
-				className={'item' + ' ' + (isActive ? null : 'visibility')}>
+				className={'item ' + (isActive ? null : 'visibility')}>
 				{props.item}
 			</p>
 		</div>
