@@ -13,7 +13,7 @@ function WriteUsSection() {
 					<form id='writeUs'>
 						<div className='wrapper'>
 							<Input
-								pattern="[a-zA-Z'-'\s]*"
+								pattern='^[a-zA-Z]+(" "?:[\s]+[a-zA-Z ]+)*$'
 								id='name'
 								idParagraph='itemName'
 								item='Wpisz poprawne imię'
