@@ -5,7 +5,7 @@ import Box from './Box/Box';
 const Item4 = () => {
 	const settings = {
 		autoplaySpeed: 2000,
-		speed: 100,
+		speed: 500,
 		focusOnSelect: false,
 		centerMode: true,
 		// autoplay: true,
